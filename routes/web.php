@@ -24,11 +24,6 @@
 //});
 
 
-
-Route::match(['get','post'],'/phpinfo',function(){
-    phpinfo();
-});
-
 //
 // Permet de créer une route avec un paramètre.
 Route::any('/essai/{nom?}/{prenom?}',function($nom='Toto',$prenom='titi'){
@@ -38,3 +33,12 @@ Route::any('/essai/{nom?}/{prenom?}',function($nom='Toto',$prenom='titi'){
 
 Route::get('/test/{nom}', 'TestController@index');
 Route::get('/test/{nom}', 'TestController@redirection');
+
+Route::get('/liste', 'FilmsController@liste');
+
+
+
+
+Route::match(['get','post'],'/phpinfo',function(){
+    phpinfo();
+});
