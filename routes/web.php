@@ -37,3 +37,4 @@ Route::any('/essai/{nom?}/{prenom?}',function($nom='Toto',$prenom='titi'){
 
 
 Route::get('/test/{nom}', 'TestController@index');
+Route::get('/test/{nom}', 'TestController@redirection');
