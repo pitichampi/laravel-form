@@ -3,7 +3,7 @@
     Plateforme de films
 @endsection
 
-
+@hello('pierre')
 @section('content')
 <h2>Liste des films proposés</h2>
 @php
