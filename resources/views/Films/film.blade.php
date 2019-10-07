@@ -15,10 +15,20 @@
             </div>
         </div>
         <div>
-            <img class="responsive-img" src="{{ asset('img/'.$film['img']) }}"> {{-- asset est un helpeur qui pointe vers le répertoire public --}}
+            <img id="{{$film['id']}}" class="responsive-img" src="{{ asset('img/'.$film['img']) }}"> {{-- asset est un helpeur qui pointe vers le répertoire public --}}
         </div>
     </td>
     <td>
         {{  $film['synopsys'] }}
     </td>
 </tr>
+
+@push('click-img')
+
+    <script>
+document.getElementById('{{$film['id']}}').addEventListener('click',function () {
+    console.log('id du film : {{$film['id']}}');
+});
+    </script>
+
+@endpush

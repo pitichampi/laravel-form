@@ -20,6 +20,16 @@ class FilmsController extends Controller
     $count++;
     $request->session()->put('count',$count);
 
+    //message d'informations
+
+       //avec une variable de session standard
+        //        $request->session()->put('message','ici mon information');
+
+        //avec une variable de session 'flash'
+
+        $request->session()->flash('message','ici mon information');
+        $request->session()->flash('status','visibility');
+
         return view('Films/liste',['films' => $films,'count'=>$count]);
     }
 }
