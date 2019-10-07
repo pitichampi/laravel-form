@@ -11,6 +11,29 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+//
+//Route::get('/', function () {
+//
+//    echo env('APP_AUTHOR');
+//    print_r($_ENV);
+//    echo config('app.timezone');
+//    config(['app.timezone'=>'Europe/paris']);
+//    echo config('app.timezone');
+//
+//    return view('welcome');
+//});
+
+
+
+Route::match(['get','post'],'/phpinfo',function(){
+    phpinfo();
 });
+
+//
+// Permet de créer une route avec un paramètre.
+Route::any('/essai/{nom?}/{prenom?}',function($nom='Toto',$prenom='titi'){
+    return 'Hello '.$prenom.' '.$nom;
+})->where(['nom'=>'[A-Z]+', 'prenom'=>'[a-z]+']);  // Permet de contrôler la variable via une regex. Si NOK -> 404
+
+
+Route::get('/test/{nom}', 'TestController@index');
