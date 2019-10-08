@@ -2,26 +2,31 @@
 
 namespace App\Http\Controllers;
 
-use http\Env\Response;
 use Illuminate\Http\Request;
-use App\Repositories\FilmsRepository;
+use Illuminate\Http\Response;
 
 class TestController extends Controller
 {
     //
-    function index($nom, Request $request){
-        echo $request->fullUrl();       // récupération de la requête
-$request->session()->put('id', '1234');     // création d'une var de session
+    function index($nom, Request $request)
+    {
+    	echo $request->nom;
+   echo $request->query('info');
+    // variables de sessions
 
+   $request->session()->put('userid', '1234'); 
+    // redirection 
+    return redirect()->action('TestController@redirection', ['nom'=>$nom]); 
 
-        return redirect()->action('TestController@redirection',['nom'=>$nom]);  // redirection vers un autre contrôleur
-
-        return Response('Hello ici contrôleur '.$nom);
-
+    	return Response('{ "texte": "Hello ici controleur test'.$nom.'"}', 301)->header('Content-Type', 'text/plain');
     }
 
-    function  redirection($nom,Request $request){
-        $id=$request->session()->get('id');     // récupération d'une var de session
-        return Response("Ma var = $id");
+    function redirection($nom, Request $request)
+    {
+
+    	// affichage de la var de session
+    	$userid=$request->session()->get('userid');
+    	return Response("mon userid : $userid mon nom : $nom"); 
+
     }
 }

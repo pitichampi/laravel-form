@@ -42,3 +42,18 @@ Route::get('/liste', 'FilmsController@liste');
 Route::match(['get','post'],'/phpinfo',function(){
     phpinfo();
 });
+
+
+// on peut mettre des loggeurs partout
+$container=app();   // permet d'accéder au conteneur du service
+
+//        dd($container); // ici je peux voir tout le conteneur
+
+// Récupération d'un service du container (ex : service log)
+$logger=$container->make('log');
+
+// utilisation d'un service logger (monolog)
+$logger->info('essai écriture dans le log 2');
+
+
+//Insertion du compteur dans le container de service

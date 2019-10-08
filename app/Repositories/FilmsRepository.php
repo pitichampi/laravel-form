@@ -1,4 +1,4 @@
-<?php
+<?php 
 namespace App\Repositories;
 
 class FilmsRepository
@@ -6,12 +6,12 @@ class FilmsRepository
     public function getListe()
     {
 
-        return self::$liste;
+        return self::$liste; 
     }
 	public static $liste= [
 		[
             'id' => 0,
-            'titre' => 'le seigneur des anneaux : le retour du roi',
+            'titre' => '<h1>le seigneur des anneaux : le retour du roi</h1>',
             'auteur' => 'Peter Jackson',
             'genre' => 'Aventure',
             'duree' => '2h15',
@@ -44,10 +44,6 @@ Voyageant à travers les terres ennemies, ce dernier doit se reposer sur Sam et 
 L\'issue de l\'histoire à venir est intimement liée au sort de la Compagnie.'
         ],
     ];
-
-
-
-
 
 
 }
