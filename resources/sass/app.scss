@@ -1,1 +1,66 @@
 //
+
+
+
+
+//Bootstrap
+@import "~bootstrap/scss/bootstrap";    // import d'un fichier contenu dans node_modules
+
+
+
+body {
+    background-color: #dfecbf;
+}
+
+.header,
+.footer,
+.last-movie {
+    text-align: center;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+#add-movie {
+    width: 800px;
+    margin: 0px auto 10px;
+}
+
+#movies {
+    width: 800px;
+}
+
+#movies tr:hover td {
+    background-color: rgba(100, 100, 100, 0.1);
+}
+
+#movies .movie-cover{
+    width: 300px;
+}
+
+#movies .movie .movie-cover .movie-info {
+    position: absolute;
+    /*display: none;*/
+    margin-top: 20px;
+    width: 0px;
+    overflow: hidden;
+    -webkit-transition: width 0.5s ease;
+    transition: width 0.5s ease;
+}
+
+#movies .movie .movie-cover .movie-info > div {
+    color: #000;
+    text-align: left;
+    margin-top: 10px;
+    padding-left: 10px;
+    width: 200px;
+    background: -webkit-gradient(linear, left top, right top, from(white), color-stop(rgba(255, 255, 255, 0.8)), color-stop(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0)));
+    background: linear-gradient(to right, white, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+}
+
+#movies .movie:hover .movie-info {
+    /*display: block;*/
+    width: 200px;
+}
+

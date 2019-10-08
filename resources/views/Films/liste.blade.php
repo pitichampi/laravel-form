@@ -19,4 +19,21 @@
 
 </table>
 
+@component('bootstrap::modal')
+
+
+    @slot('title')
+        This is the title
+    @endslot
+    @slot("id")
+        mymodal
+    @endslot
+    This is the content of the modal
+
+    @slot('footer')
+        This is the footer
+    @endslot
+@endcomponent
+
+
 @endsection
