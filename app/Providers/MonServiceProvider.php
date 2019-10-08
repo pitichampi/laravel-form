@@ -2,8 +2,10 @@
 
 namespace App\Providers;
 
+use App\ViewComposers\FilmsView;
 use Illuminate\Support\ServiceProvider;
  use App\Classes\Counter;
+
 class MonServiceProvider extends ServiceProvider
 {
     // differe l'execution methodes register
@@ -43,5 +45,6 @@ class MonServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+        view()->composer('Films/liste', FilmsView::class);
     }
 }

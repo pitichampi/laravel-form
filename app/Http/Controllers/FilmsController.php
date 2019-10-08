@@ -36,7 +36,7 @@ class FilmsController extends Controller
          // $count=app()->make('Counter')->getCounter($request);
 
          // $count=app()->make('Counter')->getCounter($request);
-        $count=CounterFacade::getCounter($request);
+
 
               // utilistauer du cahce interface
          $cache=app()->make('App\Classes\CacheInterface');
@@ -64,7 +64,7 @@ class FilmsController extends Controller
         $request->session()->flash('message', 'ici mon message information');
         // $request->session()->flash('status','info');
 
-        return view('Films/liste', ['films' => $listefilms, 'count' => $count]);
+        return view('Films/liste');
 
     }
 }
