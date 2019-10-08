@@ -12,7 +12,7 @@
 
     @endphp
 
-<table id="movies" class="table table-striped table-dark justify-content-center">
+<table id="movies" class="table table-striped table-dark container" style="width: 100%;">
 
 {{--    Pas de ; après une commande blade --}}
 @each('Films.film',$films,'film','Films.nofilm')

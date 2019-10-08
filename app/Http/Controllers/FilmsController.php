@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Repositories\FilmsRepository;
 
-use CounterFacade; 
+use CounterFacade;
 
       use Illuminate\Http\Request;
 class FilmsController extends Controller
@@ -15,33 +15,37 @@ class FilmsController extends Controller
 
       $container=app(); // acceder au conteneur de service
 
-      // dd($container); 
+      // dd($container);
       // recuperation d'un service du container le service log
-      $logger=$container->make('log') ; 
+      $logger=$container->make('log') ;
 
       // utilisation d'un service logger
-      $logger->info('essai ecriture dans la log'); 
+      $logger->info('essai ecriture dans la log');
 
 
         $listefilms = $films::$liste;
 
-        
+
       //   app()->bind('Counter', function(){
 
       //   return new Counter();
 
       // });
-        
 
-         // $count=app()->make('Counter')->getCounter($request); 
 
-         // $count=app()->make('Counter')->getCounter($request); 
-        $count=CounterFacade::getCounter($request); 
+         // $count=app()->make('Counter')->getCounter($request);
+
+         // $count=app()->make('Counter')->getCounter($request);
+        $count=CounterFacade::getCounter($request);
 
               // utilistauer du cahce interface
          $cache=app()->make('App\Classes\CacheInterface');
          $cache->set("info en cache");
-         echo $cache->get(); 
+         echo $cache->get();
+
+         //utilisation de helper
+         echo HelloFunction('Pierre');
+
         // // compteur de page
         // if ($request->session()->has('count')) {
 

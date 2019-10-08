@@ -23,6 +23,7 @@ class ComposerStaticInita88e81e8b1a1153b0bd88cd2f0abfc3a
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         'b6ec61354e97f32c0ae683041c78392a' => __DIR__ . '/..' . '/scrivo/highlight.php/HighlightUtilities/functions.php',
         'ed962a97bd972bc82007176b647d4e36' => __DIR__ . '/..' . '/facade/ignition/src/helpers.php',
+        'c41e6c4c9dabc03d7e331944474497e5' => __DIR__ . '/../..' . '/app/Helpers/MonHelper.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -420,8 +421,12 @@ class ComposerStaticInita88e81e8b1a1153b0bd88cd2f0abfc3a
     );
 
     public static $classMap = array (
+        'App\\Classes\\Cache' => __DIR__ . '/../..' . '/app/Classes/Cache.php',
+        'App\\Classes\\CacheInterface' => __DIR__ . '/../..' . '/app/Classes/CacheInterface.php',
+        'App\\Classes\\Counter' => __DIR__ . '/../..' . '/app/Classes/Counter.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Facades\\CounterFacade' => __DIR__ . '/../..' . '/app/Facades/CounterFacade.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
@@ -442,6 +447,7 @@ class ComposerStaticInita88e81e8b1a1153b0bd88cd2f0abfc3a
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
+        'App\\Providers\\MonServiceProvider' => __DIR__ . '/../..' . '/app/Providers/MonServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\Repositories\\FilmsRepository' => __DIR__ . '/../..' . '/app/Repositories/FilmsRepository.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',

@@ -6,8 +6,12 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Classes\\Cache' => $baseDir . '/app/Classes/Cache.php',
+    'App\\Classes\\CacheInterface' => $baseDir . '/app/Classes/CacheInterface.php',
+    'App\\Classes\\Counter' => $baseDir . '/app/Classes/Counter.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
+    'App\\Facades\\CounterFacade' => $baseDir . '/app/Facades/CounterFacade.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
     'App\\Http\\Controllers\\Auth\\LoginController' => $baseDir . '/app/Http/Controllers/Auth/LoginController.php',
     'App\\Http\\Controllers\\Auth\\RegisterController' => $baseDir . '/app/Http/Controllers/Auth/RegisterController.php',
@@ -28,6 +32,7 @@ return array(
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',
     'App\\Providers\\EventServiceProvider' => $baseDir . '/app/Providers/EventServiceProvider.php',
+    'App\\Providers\\MonServiceProvider' => $baseDir . '/app/Providers/MonServiceProvider.php',
     'App\\Providers\\RouteServiceProvider' => $baseDir . '/app/Providers/RouteServiceProvider.php',
     'App\\Repositories\\FilmsRepository' => $baseDir . '/app/Repositories/FilmsRepository.php',
     'App\\User' => $baseDir . '/app/User.php',
