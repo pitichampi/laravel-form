@@ -16,9 +16,9 @@ class ComposerStaticInita88e81e8b1a1153b0bd88cd2f0abfc3a
         'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
-        '9cdd7b9056abc3081735233ba9dd9c7f' => __DIR__ . '/..' . '/facade/flare-client-php/src/helpers.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
+        '9cdd7b9056abc3081735233ba9dd9c7f' => __DIR__ . '/..' . '/facade/flare-client-php/src/helpers.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         'b6ec61354e97f32c0ae683041c78392a' => __DIR__ . '/..' . '/scrivo/highlight.php/HighlightUtilities/functions.php',
@@ -136,6 +136,8 @@ class ComposerStaticInita88e81e8b1a1153b0bd88cd2f0abfc3a
         ),
         'A' => 
         array (
+            'Appstract\\BootstrapComponents\\' => 30,
+            'Appstract\\BladeDirectives\\' => 26,
             'App\\' => 4,
         ),
     );
@@ -371,6 +373,14 @@ class ComposerStaticInita88e81e8b1a1153b0bd88cd2f0abfc3a
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
         ),
+        'Appstract\\BootstrapComponents\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/appstract/laravel-bootstrap-components/src',
+        ),
+        'Appstract\\BladeDirectives\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/appstract/laravel-blade-directives/src',
+        ),
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
@@ -418,6 +428,8 @@ class ComposerStaticInita88e81e8b1a1153b0bd88cd2f0abfc3a
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\FilmsController' => __DIR__ . '/../..' . '/app/Http/Controllers/FilmsController.php',
+        'App\\Http\\Controllers\\TestController' => __DIR__ . '/../..' . '/app/Http/Controllers/TestController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',
@@ -431,7 +443,13 @@ class ComposerStaticInita88e81e8b1a1153b0bd88cd2f0abfc3a
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'App\\Repositories\\FilmsRepository' => __DIR__ . '/../..' . '/app/Repositories/FilmsRepository.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
+        'Appstract\\BladeDirectives\\BladeDirectivesServiceProvider' => __DIR__ . '/..' . '/appstract/laravel-blade-directives/src/BladeDirectivesServiceProvider.php',
+        'Appstract\\BladeDirectives\\DirectivesRepository' => __DIR__ . '/..' . '/appstract/laravel-blade-directives/src/DirectivesRepository.php',
+        'Appstract\\BootstrapComponents\\BootstrapComponentsClass' => __DIR__ . '/..' . '/appstract/laravel-bootstrap-components/src/BootstrapComponentsClass.php',
+        'Appstract\\BootstrapComponents\\BootstrapComponentsFacade' => __DIR__ . '/..' . '/appstract/laravel-bootstrap-components/src/BootstrapComponentsFacade.php',
+        'Appstract\\BootstrapComponents\\BootstrapComponentsServiceProvider' => __DIR__ . '/..' . '/appstract/laravel-bootstrap-components/src/BootstrapComponentsServiceProvider.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonImmutable' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonImmutable.php',
         'Carbon\\CarbonInterface' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterface.php',

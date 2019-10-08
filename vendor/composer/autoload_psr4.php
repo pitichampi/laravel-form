@@ -63,5 +63,7 @@ return array(
     'DeepCopy\\' => array($vendorDir . '/myclabs/deep-copy/src/DeepCopy'),
     'Cron\\' => array($vendorDir . '/dragonmantank/cron-expression/src/Cron'),
     'Carbon\\' => array($vendorDir . '/nesbot/carbon/src/Carbon'),
+    'Appstract\\BootstrapComponents\\' => array($vendorDir . '/appstract/laravel-bootstrap-components/src'),
+    'Appstract\\BladeDirectives\\' => array($vendorDir . '/appstract/laravel-blade-directives/src'),
     'App\\' => array($baseDir . '/app'),
 );

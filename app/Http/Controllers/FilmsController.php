@@ -26,9 +26,8 @@ class FilmsController extends Controller
         //        $request->session()->put('message','ici mon information');
 
         //avec une variable de session 'flash'
-
-        $request->session()->flash('message','ici mon information');
-        $request->session()->flash('status','visibility');
+//        $request->session()->flash('message','ici mon information');
+//        $request->session()->flash('status','visibility');
 
         return view('Films/liste',['films' => $films,'count'=>$count]);
     }
