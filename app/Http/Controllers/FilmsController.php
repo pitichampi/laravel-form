@@ -43,8 +43,6 @@ class FilmsController extends Controller
          $cache->set("info en cache");
          echo $cache->get();
 
-         //utilisation de helper
-         echo HelloFunction('Pierre');
 
         // // compteur de page
         // if ($request->session()->has('count')) {

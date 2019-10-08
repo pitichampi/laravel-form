@@ -3,7 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
- use App\Classes\Counter; 
+ use App\Classes\Counter;
 class MonServiceProvider extends ServiceProvider
 {
     // differe l'execution methodes register
@@ -25,7 +25,15 @@ class MonServiceProvider extends ServiceProvider
          // bind de Cache
 
          app()->bind('App\Classes\CacheInterface','App\Classes\Cache');
+
+        //helpeurs
+        $file=app_path('Helpers/MonHelper2.php');
+        if(file_exists($file)) {
+            require_once($file);
+        }
     }
+
+
 
     /**
      * Bootstrap services.

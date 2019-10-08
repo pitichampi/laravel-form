@@ -1,6 +1,18 @@
 <p>
     Vous avez visité cette page {{$count}}
 </p>
+<p>
+    {{HelloFunction('Pierre')}}
+
+</p>
+<p>
+    {{Hello2Function('Pierre')}}
+
+</p>
+<p>
+    {{DummyFunction()}}
+
+</p>
 
 {{-- Affichage des messages --}}
 
