@@ -21,7 +21,7 @@
 
     </head>
     <body>
-@include('header',['count=20'])
+{{--@include('header',['count=20'])--}}
     @yield('content');
 
     @stack('click-img')
