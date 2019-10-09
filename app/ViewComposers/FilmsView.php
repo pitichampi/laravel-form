@@ -21,7 +21,10 @@
 namespace App\ViewComposers;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
-use App\Repositories\FilmsRepository;
+//use App\Repositories\FilmsRepository;
+use App\Models\Films;
+
+
 use App\Facades\CounterFacade;
 class FilmsView
 {
@@ -33,7 +36,8 @@ class FilmsView
 
     public function compose(View $view){
 
-        $listefilms=FilmsRepository::$liste;
+        //$listefilms=FilmsRepository::$liste;
+        $listefilms = Films::all();  //récupère toutes les données de la table films
         $count=CounterFacade::getCounter($this->request);
         $view->with(['films' => $listefilms, 'count' => $count]);
 

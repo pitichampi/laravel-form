@@ -21,7 +21,7 @@ class CreateFilmsTable extends Migration
             $table->string('duree');
             $table->year('annee');
             $table->string('img');
-            $table->string('synopsys');
+            $table->text('synopsys');
             $table->timestamps();
 
         });
