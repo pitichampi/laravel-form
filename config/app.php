@@ -177,6 +177,8 @@ return [
         App\Providers\MonServiceProvider::class,
         browner12\helpers\HelperServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
+        Kris\LaravelFormBuilder\FormBuilderServiceProvider::class,
+
 
     ],
 
@@ -230,6 +232,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'CounterFacade' => App\Facades\CounterFacade::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'FormBuilder' => Kris\LaravelFormBuilder\Facades\FormBuilder::class,
 
     ],
 

@@ -14,7 +14,7 @@ class AdminController extends Controller
     public function delete($id){
 
     }
-    public function update($id){
+    public function update($idcomposer){
 
     }
 
