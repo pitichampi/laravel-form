@@ -15,7 +15,7 @@ class AddFilmsImmatriculations extends Migration
     {
         Schema::table('immatriculations', function (Blueprint $table) {
             //
-            $table->unsignedInteger('films_id')->nullable();
+            $table->unsignedBigInteger('films_id')->nullable();
             $table->foreign('films_id')->references('id')->on('films');
         });
     }
