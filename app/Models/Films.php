@@ -20,6 +20,4 @@ class Films extends Model
         return $this->hasOne('App\Models\Immatriculations');
     }
 
-
-
 }

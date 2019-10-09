@@ -15,7 +15,7 @@
             </div>
             @isset($film['immatriculations']->numero)
             <div class="movie-immatriculation">
-                {{$film['immatriculations']->numero}}
+                Numéro : {{$film['immatriculations']->numero}}
             </div>
             @endif
         </div>
