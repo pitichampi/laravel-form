@@ -56,4 +56,13 @@ $logger=$container->make('log');
 $logger->info('essai écriture dans le log 2');
 
 
-//Insertion du compteur dans le container de service
+// Grouper les routes de l'admin
+Route::group(['prefix'=>'admin'], function (){
+
+    Route::get('/insert', ['as'=>'insert','uses'=>'AdminController@insert']);       //as précise l'étiquette de la route dans une vue blade
+    Route::get('/update:{id}', ['as'=>'update','uses'=>'AdminController@update']);
+    Route::get('/delete:{id}', ['as'=>'delete','uses'=>'AdminController@delete']);
+    Route::get('/valid', ['as'=>'valid','uses'=>'AdminController@valid']);
+
+});
+
