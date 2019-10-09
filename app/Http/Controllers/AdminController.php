@@ -35,9 +35,19 @@ class AdminController extends Controller
     public function valid(){
         $params=$this->form(FilmsForm::class)->getFieldValues();
 
+        //Récupération de l'image
+        $img=$params['img'];
+        $imgname=$img->getCLientOriginalName;
+        $img->move(public_path('img'),$imgname);
+        $params['img']=$imgname;
+
         //fill remplit les propriétés avec les valeurs de params
         $film = new Films;
         $film->fill($params)->save();
+        return redirect()->action('FilmsController@liste')->with([
+            'status'=> 'success',
+            'message'=>'Un nouveau film a été inséré'
+        ]);
     }
 
 }
