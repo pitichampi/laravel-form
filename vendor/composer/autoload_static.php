@@ -459,6 +459,7 @@ class ComposerStaticInita88e81e8b1a1153b0bd88cd2f0abfc3a
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\Repositories\\FilmsRepository' => __DIR__ . '/../..' . '/app/Repositories/FilmsRepository.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
+        'App\\ViewComposers\\FilmsView' => __DIR__ . '/../..' . '/app/ViewComposers/FilmsView.php',
         'Appstract\\BladeDirectives\\BladeDirectivesServiceProvider' => __DIR__ . '/..' . '/appstract/laravel-blade-directives/src/BladeDirectivesServiceProvider.php',
         'Appstract\\BladeDirectives\\DirectivesRepository' => __DIR__ . '/..' . '/appstract/laravel-blade-directives/src/DirectivesRepository.php',
         'Appstract\\BootstrapComponents\\BootstrapComponentsClass' => __DIR__ . '/..' . '/appstract/laravel-bootstrap-components/src/BootstrapComponentsClass.php',

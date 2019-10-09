@@ -36,6 +36,7 @@ return array(
     'App\\Providers\\RouteServiceProvider' => $baseDir . '/app/Providers/RouteServiceProvider.php',
     'App\\Repositories\\FilmsRepository' => $baseDir . '/app/Repositories/FilmsRepository.php',
     'App\\User' => $baseDir . '/app/User.php',
+    'App\\ViewComposers\\FilmsView' => $baseDir . '/app/ViewComposers/FilmsView.php',
     'Appstract\\BladeDirectives\\BladeDirectivesServiceProvider' => $vendorDir . '/appstract/laravel-blade-directives/src/BladeDirectivesServiceProvider.php',
     'Appstract\\BladeDirectives\\DirectivesRepository' => $vendorDir . '/appstract/laravel-blade-directives/src/DirectivesRepository.php',
     'Appstract\\BootstrapComponents\\BootstrapComponentsClass' => $vendorDir . '/appstract/laravel-bootstrap-components/src/BootstrapComponentsClass.php',
