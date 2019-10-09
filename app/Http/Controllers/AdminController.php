@@ -33,11 +33,16 @@ class AdminController extends Controller
     }
 
     public function valid(){
+        $form=$this->form(FilmsForm::class);
+        if(!$form->isValid()){
+            return redirect()->back()->withErrors($form->getErrors())->withInput();
+        }
+
         $params=$this->form(FilmsForm::class)->getFieldValues();
 
         //Récupération de l'image
         $img=$params['img'];
-        $imgname=$img->getCLientOriginalName;
+        $imgname=$img->getClientOriginalName();
         $img->move(public_path('img'),$imgname);
         $params['img']=$imgname;
 

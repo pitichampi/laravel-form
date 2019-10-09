@@ -9,7 +9,7 @@ class FilmsForm extends Form
     public function buildForm()
     {
         // Add fields here...
-        $this->add('titre','text',['label'=>'titre du film']);
+        $this->add('titre','text',['label'=>'titre du film','rules'=>'required|min:2']);
         $this->add('auteur','text',['label'=>'auteur du film']);
         $this->add('annee','text',['label'=>'année du film']);
         $this->add('genre','text',['label'=>'genre du film']);
