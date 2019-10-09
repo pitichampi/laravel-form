@@ -13,6 +13,11 @@
             <div class="movie-annee">
                 {{$film['annee']}}
             </div>
+            @isset($film['immatriculations']->numero)
+            <div class="movie-immatriculation">
+                {{$film['immatriculations']->numero}}
+            </div>
+            @endif
         </div>
         <div>
             <img id="{{$film['id']}}" class="responsive-img"
