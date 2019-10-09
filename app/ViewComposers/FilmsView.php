@@ -38,7 +38,7 @@ class FilmsView
     public function compose(View $view){
 
         //$listefilms=FilmsRepository::$liste;
-        $listefilms = Films::all();  //récupère toutes les données de la table films - Pas besoin d'utiliser la méthode get pour ce cas.
+        //$listefilms = Films::all();  //récupère toutes les données de la table films - Pas besoin d'utiliser la méthode get pour ce cas.
         //$listefilms = Films::orderby('annee','desc')->orderby('titre','asc')->get();  // un peu de tri. Attention ! il faut utiliser la méthode get.
         //$listefilms = Films::where('annee',2010)->orderby('titre','asc')->get();  // where
         //$listefilms = Films::where('annee',2010)->orderby('titre','asc')->first();  // first au lieu de get. Attention ne retourne pas un tableau d'objets mais l'objet directement.
@@ -57,6 +57,7 @@ class FilmsView
         //$listefilms=$filmsData->fetchAll(PDO::FETCH_ASSOC);
         // Attention rajouter un use PDO en plus du use DB. En fait on utilise simplement l'objet PDO standard.
 
+        $listefilms = Films::with('immatriculations')->get();   // évite un lazy load lorsque l'on veut récupérer les jointures. Il faut mettre la propriété et non la méthode. Il faut donc mettre une minuscule.
 
 
         $count=CounterFacade::getCounter($this->request);
