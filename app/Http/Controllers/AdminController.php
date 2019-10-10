@@ -9,6 +9,7 @@ use Kris\LaravelFormBuilder\FormBuilderTrait;
 use App\Models\Films;
 use App\Http\Requests\StoreFilms;
 use Illuminate\Support\Facades\Gate;
+use Auth;
 
 class AdminController extends Controller
 {
@@ -19,7 +20,7 @@ class AdminController extends Controller
         $valid=Gate::allows('insert-films');
 
         if(!$valid){
-            dd('erreur ! interdit for you');
+            dd('erreur ! interdit for you insert');
         }
         $form=$this->form(FilmsForm::class, [
             'method'=>'POST',
@@ -31,7 +32,19 @@ class AdminController extends Controller
     public function delete($id){
 
     }
-    public function update($idcomposer){
+    public function update($id){
+        $film=Films::where('id','=',$id)->first();
+        echo Auth::user()->id;
+//        dd($film);
+        $valid=Gate::allows('update-films',$id);
+
+        if(!$valid){
+            dd('erreur ! interdit for you update');
+        } else {
+            dd('korrrrrekt :)');
+        }
+
+
         $this->form(FilmsForm::class, [
             'method'=>'POST',
             'url'=>route('valid')

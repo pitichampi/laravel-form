@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Films;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
 
@@ -28,6 +29,14 @@ class AuthServiceProvider extends ServiceProvider
         //Gates portes d'accès
         Gate::define('insert-film',function ($user){
             return $user->isAdmin();
+        });
+
+
+        Gate::define('update-film',function ($user, $id){
+            echo $user->id;
+            $user_id=Films::find($id)->user_id;
+
+            return $user->id==$user_id;
         });
         //
     }
