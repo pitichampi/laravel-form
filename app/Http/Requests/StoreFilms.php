@@ -35,4 +35,12 @@ class StoreFilms extends FormRequest
             'titre.unique'=>' Le titre du film doit être unique dans la base. '
         ];
     }
+    public function withValidator($validator)
+    {
+        $validator->after(function ($validator){
+            if(true){
+                $validator->errors()->add('field', 'Buuupppppp y a un souci avec :'.$this->titre);
+            }
+        });
+    }
 }
