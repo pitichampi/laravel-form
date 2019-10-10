@@ -62,7 +62,7 @@ Route::group(['prefix'=>'admin'], function (){
     Route::get('/insert', ['as'=>'insert','uses'=>'AdminController@insert']);       //as précise l'étiquette de la route dans une vue blade
     Route::get('/update:{id}', ['as'=>'update','uses'=>'AdminController@update']);
     Route::get('/delete:{id}', ['as'=>'delete','uses'=>'AdminController@delete']);
-    Route::post('/valid', ['as'=>'valid','uses'=>'AdminController@valid']);
+    Route::post('/valid', ['as'=>'valid','uses'=>'AdminController@valid'])->middleware('checkFilms');
 
 });
 
