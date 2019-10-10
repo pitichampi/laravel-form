@@ -46,6 +46,7 @@ return array(
     'NunoMaduro\\Collision\\' => array($vendorDir . '/nunomaduro/collision/src'),
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
     'League\\Flysystem\\' => array($vendorDir . '/league/flysystem/src'),
+    'Laravel\\Ui\\' => array($vendorDir . '/laravel/ui/src'),
     'Laravel\\Tinker\\' => array($vendorDir . '/laravel/tinker/src'),
     'Laravel\\Homestead\\' => array($vendorDir . '/laravel/homestead/src'),
     'Jimbolino\\Laravel\\ModelBuilder\\' => array($vendorDir . '/jimbolino/laravel-model-builder/src'),

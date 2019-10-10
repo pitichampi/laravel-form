@@ -67,4 +67,6 @@ Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function (){
 
 });
 
-Route::get('/generate/models', '\\Jimbolino\\Laravel\\ModelBuilder\\ModelGenerator5@start');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
