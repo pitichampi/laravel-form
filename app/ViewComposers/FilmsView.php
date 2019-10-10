@@ -60,7 +60,11 @@ class FilmsView
         //$listefilms = Films::with('immatriculations')->get();   // évite un lazy load lorsque l'on veut récupérer les jointures. Il faut mettre la propriété et non la méthode. Il faut donc mettre une minuscule.
 
         //Désctivation du scope
-        $listefilms = Films::withoutGlobalScope(FilmsScope::class)->with('immatriculations')->get();
+        //$listefilms = Films::withoutGlobalScope(FilmsScope::class)->with('immatriculations')->get();
+
+
+        //Utilisation en plus d'un scope local
+        $listefilms = Films::withoutGlobalScope(FilmsScope::class)->films()->with('immatriculations')->get();
 
 
         $count=CounterFacade::getCounter($this->request);

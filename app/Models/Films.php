@@ -14,9 +14,7 @@ class Films extends Model
     public function setTitleAttribute($value){
         $this->attributes['title']=strtolower($value);
     }
-    public static function scopeFilms($query){
 
-    }
 
     protected static function boot()
     {
@@ -24,6 +22,10 @@ class Films extends Model
         static::addGlobalScope(new FilmsScope());
     }
 
+    //Scope local
+    public static function scopeFilms($query){
+        return $query->where('annee','<','2001');
+    }
 
     public function Immatriculations(){
         return $this->hasOne('App\Models\Immatriculations');
