@@ -8,6 +8,7 @@ use App\Forms\FilmsForm;
 use Kris\LaravelFormBuilder\FormBuilderTrait;
 use App\Models\Films;
 use App\Http\Requests\StoreFilms;
+use Illuminate\Support\Facades\Gate;
 
 class AdminController extends Controller
 {
@@ -15,6 +16,11 @@ class AdminController extends Controller
 
     use FormBuilderTrait;
     public function insert(){
+        $valid=Gate::allows('insert-films');
+
+        if(!$valid){
+            dd('erreur ! interdit for you');
+        }
         $form=$this->form(FilmsForm::class, [
             'method'=>'POST',
             'url'=>route('valid')

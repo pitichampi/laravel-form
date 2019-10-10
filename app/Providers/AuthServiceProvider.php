@@ -25,6 +25,10 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
+        //Gates portes d'accès
+        Gate::define('insert-film',function ($user){
+            return $user->isAdmin();
+        });
         //
     }
 }
