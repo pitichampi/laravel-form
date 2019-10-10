@@ -12,6 +12,8 @@
         "appstract/laravel-bootstrap-components": "^1.1",
         "browner12/helpers": "^3.0",
         "fideloper/proxy": "^4.0",
+        "gguney/rmigration": "dev-master",
+        "jimbolino/laravel-model-builder": "dev-master",
         "kris/laravel-form-builder": "^1.22",
         "laravel/framework": "^6.0",
         "laravel/tinker": "^1.0"

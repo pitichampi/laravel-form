@@ -110,12 +110,17 @@ class ComposerStaticInita88e81e8b1a1153b0bd88cd2f0abfc3a
         ),
         'J' => 
         array (
+            'Jimbolino\\Laravel\\ModelBuilder\\' => 31,
             'JakubOnderka\\PhpConsoleHighlighter\\' => 35,
             'JakubOnderka\\PhpConsoleColor\\' => 29,
         ),
         'I' => 
         array (
             'Illuminate\\' => 11,
+        ),
+        'G' => 
+        array (
+            'GGuney\\RMigration\\' => 18,
         ),
         'F' => 
         array (
@@ -327,6 +332,10 @@ class ComposerStaticInita88e81e8b1a1153b0bd88cd2f0abfc3a
         array (
             0 => __DIR__ . '/..' . '/laravel/homestead/src',
         ),
+        'Jimbolino\\Laravel\\ModelBuilder\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jimbolino/laravel-model-builder/src',
+        ),
         'JakubOnderka\\PhpConsoleHighlighter\\' => 
         array (
             0 => __DIR__ . '/..' . '/jakub-onderka/php-console-highlighter/src',
@@ -338,6 +347,10 @@ class ComposerStaticInita88e81e8b1a1153b0bd88cd2f0abfc3a
         'Illuminate\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/framework/src/Illuminate',
+        ),
+        'GGuney\\RMigration\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/gguney/rmigration/src',
         ),
         'Fideloper\\Proxy\\' => 
         array (
@@ -463,6 +476,7 @@ class ComposerStaticInita88e81e8b1a1153b0bd88cd2f0abfc3a
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Facades\\CounterFacade' => __DIR__ . '/../..' . '/app/Facades/CounterFacade.php',
+        'App\\Forms\\FilmsForm' => __DIR__ . '/../..' . '/app/Forms/FilmsForm.php',
         'App\\Http\\Controllers\\AdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
@@ -480,6 +494,7 @@ class ComposerStaticInita88e81e8b1a1153b0bd88cd2f0abfc3a
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Http\\Requests\\StoreFilms' => __DIR__ . '/../..' . '/app/Http/Requests/StoreFilms.php',
         'App\\Models\\Films' => __DIR__ . '/../..' . '/app/Models/Films.php',
         'App\\Models\\Immatriculations' => __DIR__ . '/../..' . '/app/Models/Immatriculations.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
@@ -489,6 +504,7 @@ class ComposerStaticInita88e81e8b1a1153b0bd88cd2f0abfc3a
         'App\\Providers\\MonServiceProvider' => __DIR__ . '/../..' . '/app/Providers/MonServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\Repositories\\FilmsRepository' => __DIR__ . '/../..' . '/app/Repositories/FilmsRepository.php',
+        'App\\Scopes\\FilmsScope' => __DIR__ . '/../..' . '/app/Scopes/FilmsScope.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'App\\ViewComposers\\FilmsView' => __DIR__ . '/../..' . '/app/ViewComposers/FilmsView.php',
         'Appstract\\BladeDirectives\\BladeDirectivesServiceProvider' => __DIR__ . '/..' . '/appstract/laravel-blade-directives/src/BladeDirectivesServiceProvider.php',
@@ -795,6 +811,7 @@ class ComposerStaticInita88e81e8b1a1153b0bd88cd2f0abfc3a
         'Facade\\IgnitionContracts\\Solution' => __DIR__ . '/..' . '/facade/ignition-contracts/src/Solution.php',
         'Facade\\IgnitionContracts\\SolutionProviderRepository' => __DIR__ . '/..' . '/facade/ignition-contracts/src/SolutionProviderRepository.php',
         'Facade\\Ignition\\Actions\\ShareReportAction' => __DIR__ . '/..' . '/facade/ignition/src/Actions/ShareReportAction.php',
+        'Facade\\Ignition\\Commands\\SolutionMakeCommand' => __DIR__ . '/..' . '/facade/ignition/src/Commands/SolutionMakeCommand.php',
         'Facade\\Ignition\\Commands\\TestCommand' => __DIR__ . '/..' . '/facade/ignition/src/Commands/TestCommand.php',
         'Facade\\Ignition\\Context\\LaravelConsoleContext' => __DIR__ . '/..' . '/facade/ignition/src/Context/LaravelConsoleContext.php',
         'Facade\\Ignition\\Context\\LaravelContextDetector' => __DIR__ . '/..' . '/facade/ignition/src/Context/LaravelContextDetector.php',
@@ -851,6 +868,7 @@ class ComposerStaticInita88e81e8b1a1153b0bd88cd2f0abfc3a
         'Facade\\Ignition\\SolutionProviders\\SolutionProviderRepository' => __DIR__ . '/..' . '/facade/ignition/src/SolutionProviders/SolutionProviderRepository.php',
         'Facade\\Ignition\\SolutionProviders\\TableNotFoundSolutionProvider' => __DIR__ . '/..' . '/facade/ignition/src/SolutionProviders/TableNotFoundSolutionProvider.php',
         'Facade\\Ignition\\SolutionProviders\\UndefinedVariableSolutionProvider' => __DIR__ . '/..' . '/facade/ignition/src/SolutionProviders/UndefinedVariableSolutionProvider.php',
+        'Facade\\Ignition\\SolutionProviders\\UnknownValidationSolutionProvider' => __DIR__ . '/..' . '/facade/ignition/src/SolutionProviders/UnknownValidationSolutionProvider.php',
         'Facade\\Ignition\\SolutionProviders\\ViewNotFoundSolutionProvider' => __DIR__ . '/..' . '/facade/ignition/src/SolutionProviders/ViewNotFoundSolutionProvider.php',
         'Facade\\Ignition\\Solutions\\GenerateAppKeySolution' => __DIR__ . '/..' . '/facade/ignition/src/Solutions/GenerateAppKeySolution.php',
         'Facade\\Ignition\\Solutions\\MakeViewVariableOptionalSolution' => __DIR__ . '/..' . '/facade/ignition/src/Solutions/MakeViewVariableOptionalSolution.php',
@@ -1310,6 +1328,8 @@ class ComposerStaticInita88e81e8b1a1153b0bd88cd2f0abfc3a
         'FilmsJointureImmatSeeder' => __DIR__ . '/../..' . '/database/seeds/FilmsJointureImmatSeeder.php',
         'FilmsTableSeeder' => __DIR__ . '/../..' . '/database/seeds/FilmsTableSeeder.php',
         'FormBuilderTestCase' => __DIR__ . '/..' . '/kris/laravel-form-builder/tests/FormBuilderTestCase.php',
+        'GGuney\\RMigration\\Commands\\MakeReverseMigration' => __DIR__ . '/..' . '/gguney/rmigration/src/Commands/MakeReverseMigration.php',
+        'GGuney\\RMigration\\RMigrationServiceProvider' => __DIR__ . '/..' . '/gguney/rmigration/src/RMigrationServiceProvider.php',
         'Hamcrest\\Arrays\\IsArray' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArray.php',
         'Hamcrest\\Arrays\\IsArrayContaining' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArrayContaining.php',
         'Hamcrest\\Arrays\\IsArrayContainingInAnyOrder' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArrayContainingInAnyOrder.php',
@@ -1412,6 +1432,7 @@ class ComposerStaticInita88e81e8b1a1153b0bd88cd2f0abfc3a
         'Illuminate\\Auth\\Middleware\\AuthenticateWithBasicAuth' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Auth/Middleware/AuthenticateWithBasicAuth.php',
         'Illuminate\\Auth\\Middleware\\Authorize' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Auth/Middleware/Authorize.php',
         'Illuminate\\Auth\\Middleware\\EnsureEmailIsVerified' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Auth/Middleware/EnsureEmailIsVerified.php',
+        'Illuminate\\Auth\\Middleware\\RequirePassword' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Auth/Middleware/RequirePassword.php',
         'Illuminate\\Auth\\MustVerifyEmail' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Auth/MustVerifyEmail.php',
         'Illuminate\\Auth\\Notifications\\ResetPassword' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Auth/Notifications/ResetPassword.php',
         'Illuminate\\Auth\\Notifications\\VerifyEmail' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Auth/Notifications/VerifyEmail.php',
@@ -1743,6 +1764,7 @@ class ComposerStaticInita88e81e8b1a1153b0bd88cd2f0abfc3a
         'Illuminate\\Foundation\\Auth\\Access\\Authorizable' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Auth/Access/Authorizable.php',
         'Illuminate\\Foundation\\Auth\\Access\\AuthorizesRequests' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Auth/Access/AuthorizesRequests.php',
         'Illuminate\\Foundation\\Auth\\AuthenticatesUsers' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php',
+        'Illuminate\\Foundation\\Auth\\ConfirmsPasswords' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Auth/ConfirmsPasswords.php',
         'Illuminate\\Foundation\\Auth\\RedirectsUsers' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Auth/RedirectsUsers.php',
         'Illuminate\\Foundation\\Auth\\RegistersUsers' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Auth/RegistersUsers.php',
         'Illuminate\\Foundation\\Auth\\ResetsPasswords' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Auth/ResetsPasswords.php',
@@ -2218,6 +2240,18 @@ class ComposerStaticInita88e81e8b1a1153b0bd88cd2f0abfc3a
         'JakubOnderka\\PhpConsoleColor\\ConsoleColor' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/ConsoleColor.php',
         'JakubOnderka\\PhpConsoleColor\\InvalidStyleException' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/InvalidStyleException.php',
         'JakubOnderka\\PhpConsoleHighlighter\\Highlighter' => __DIR__ . '/..' . '/jakub-onderka/php-console-highlighter/src/Highlighter.php',
+        'Jimbolino\\Laravel\\ModelBuilder\\ArrayHelpers' => __DIR__ . '/..' . '/jimbolino/laravel-model-builder/src/ArrayHelpers.php',
+        'Jimbolino\\Laravel\\ModelBuilder\\ConsoleCommand' => __DIR__ . '/..' . '/jimbolino/laravel-model-builder/src/ConsoleCommand.php',
+        'Jimbolino\\Laravel\\ModelBuilder\\Database' => __DIR__ . '/..' . '/jimbolino/laravel-model-builder/src/Database.php',
+        'Jimbolino\\Laravel\\ModelBuilder\\Model' => __DIR__ . '/..' . '/jimbolino/laravel-model-builder/src/Model.php',
+        'Jimbolino\\Laravel\\ModelBuilder\\ModelGenerator' => __DIR__ . '/..' . '/jimbolino/laravel-model-builder/src/ModelGenerator.php',
+        'Jimbolino\\Laravel\\ModelBuilder\\ModelGenerator4' => __DIR__ . '/..' . '/jimbolino/laravel-model-builder/src/ModelGenerator4.php',
+        'Jimbolino\\Laravel\\ModelBuilder\\ModelGenerator5' => __DIR__ . '/..' . '/jimbolino/laravel-model-builder/src/ModelGenerator5.php',
+        'Jimbolino\\Laravel\\ModelBuilder\\ModelGeneratorLumen' => __DIR__ . '/..' . '/jimbolino/laravel-model-builder/src/ModelGeneratorLumen.php',
+        'Jimbolino\\Laravel\\ModelBuilder\\NamingConvention' => __DIR__ . '/..' . '/jimbolino/laravel-model-builder/src/NamingConvention.php',
+        'Jimbolino\\Laravel\\ModelBuilder\\Relation' => __DIR__ . '/..' . '/jimbolino/laravel-model-builder/src/Relation.php',
+        'Jimbolino\\Laravel\\ModelBuilder\\Relations' => __DIR__ . '/..' . '/jimbolino/laravel-model-builder/src/Relations.php',
+        'Jimbolino\\Laravel\\ModelBuilder\\StringUtils' => __DIR__ . '/..' . '/jimbolino/laravel-model-builder/src/StringUtils.php',
         'JsonException' => __DIR__ . '/..' . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
         'Kris\\LaravelFormBuilder\\Console\\FormGenerator' => __DIR__ . '/..' . '/kris/laravel-form-builder/src/Kris/LaravelFormBuilder/Console/FormGenerator.php',
         'Kris\\LaravelFormBuilder\\Console\\FormMakeCommand' => __DIR__ . '/..' . '/kris/laravel-form-builder/src/Kris/LaravelFormBuilder/Console/FormMakeCommand.php',
@@ -2641,18 +2675,18 @@ class ComposerStaticInita88e81e8b1a1153b0bd88cd2f0abfc3a
         'PHPUnit\\Framework\\MockObject\\MockTrait' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/MockTrait.php',
         'PHPUnit\\Framework\\MockObject\\MockType' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/MockType.php',
         'PHPUnit\\Framework\\MockObject\\MockedCloneMethod' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Api/MockedCloneMethod.php',
-        'PHPUnit\\Framework\\MockObject\\Rule\\AnyInvokedCount' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Matcher/AnyInvokedCount.php',
-        'PHPUnit\\Framework\\MockObject\\Rule\\AnyParameters' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Matcher/AnyParameters.php',
-        'PHPUnit\\Framework\\MockObject\\Rule\\ConsecutiveParameters' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Matcher/ConsecutiveParameters.php',
-        'PHPUnit\\Framework\\MockObject\\Rule\\InvocationOrder' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Matcher/InvocationOrder.php',
-        'PHPUnit\\Framework\\MockObject\\Rule\\InvokedAtIndex' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Matcher/InvokedAtIndex.php',
-        'PHPUnit\\Framework\\MockObject\\Rule\\InvokedAtLeastCount' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Matcher/InvokedAtLeastCount.php',
-        'PHPUnit\\Framework\\MockObject\\Rule\\InvokedAtLeastOnce' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Matcher/InvokedAtLeastOnce.php',
-        'PHPUnit\\Framework\\MockObject\\Rule\\InvokedAtMostCount' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Matcher/InvokedAtMostCount.php',
-        'PHPUnit\\Framework\\MockObject\\Rule\\InvokedCount' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Matcher/InvokedCount.php',
-        'PHPUnit\\Framework\\MockObject\\Rule\\MethodName' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Matcher/MethodName.php',
-        'PHPUnit\\Framework\\MockObject\\Rule\\Parameters' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Matcher/Parameters.php',
-        'PHPUnit\\Framework\\MockObject\\Rule\\ParametersRule' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Matcher/ParametersRule.php',
+        'PHPUnit\\Framework\\MockObject\\Rule\\AnyInvokedCount' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Rule/AnyInvokedCount.php',
+        'PHPUnit\\Framework\\MockObject\\Rule\\AnyParameters' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Rule/AnyParameters.php',
+        'PHPUnit\\Framework\\MockObject\\Rule\\ConsecutiveParameters' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Rule/ConsecutiveParameters.php',
+        'PHPUnit\\Framework\\MockObject\\Rule\\InvocationOrder' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Rule/InvocationOrder.php',
+        'PHPUnit\\Framework\\MockObject\\Rule\\InvokedAtIndex' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Rule/InvokedAtIndex.php',
+        'PHPUnit\\Framework\\MockObject\\Rule\\InvokedAtLeastCount' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Rule/InvokedAtLeastCount.php',
+        'PHPUnit\\Framework\\MockObject\\Rule\\InvokedAtLeastOnce' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Rule/InvokedAtLeastOnce.php',
+        'PHPUnit\\Framework\\MockObject\\Rule\\InvokedAtMostCount' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Rule/InvokedAtMostCount.php',
+        'PHPUnit\\Framework\\MockObject\\Rule\\InvokedCount' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Rule/InvokedCount.php',
+        'PHPUnit\\Framework\\MockObject\\Rule\\MethodName' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Rule/MethodName.php',
+        'PHPUnit\\Framework\\MockObject\\Rule\\Parameters' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Rule/Parameters.php',
+        'PHPUnit\\Framework\\MockObject\\Rule\\ParametersRule' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Rule/ParametersRule.php',
         'PHPUnit\\Framework\\MockObject\\RuntimeException' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Exception/RuntimeException.php',
         'PHPUnit\\Framework\\MockObject\\Stub' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Stub.php',
         'PHPUnit\\Framework\\MockObject\\Stub\\ConsecutiveCalls' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Stub/ConsecutiveCalls.php',

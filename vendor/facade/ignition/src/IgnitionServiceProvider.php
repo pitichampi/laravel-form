@@ -28,6 +28,7 @@ use Facade\Ignition\Exceptions\InvalidConfig;
 use Facade\Ignition\DumpRecorder\DumpRecorder;
 use Facade\Ignition\Middleware\SetNotifierName;
 use Facade\Ignition\QueryRecorder\QueryRecorder;
+use Facade\Ignition\Commands\SolutionMakeCommand;
 use Facade\Ignition\Middleware\AddGitInformation;
 use Facade\Ignition\Views\Engines\CompilerEngine;
 use Facade\Ignition\Context\LaravelContextDetector;
@@ -53,6 +54,7 @@ use Facade\Ignition\SolutionProviders\TableNotFoundSolutionProvider;
 use Illuminate\View\Engines\CompilerEngine as LaravelCompilerEngine;
 use Facade\Ignition\SolutionProviders\MissingPackageSolutionProvider;
 use Facade\Ignition\SolutionProviders\UndefinedVariableSolutionProvider;
+use Facade\Ignition\SolutionProviders\UnknownValidationSolutionProvider;
 use Facade\Ignition\SolutionProviders\InvalidRouteActionSolutionProvider;
 use Facade\Ignition\SolutionProviders\RunningLaravelDuskInProductionProvider;
 use Facade\Ignition\SolutionProviders\IncorrectValetDbCredentialsSolutionProvider;
@@ -284,9 +286,11 @@ class IgnitionServiceProvider extends ServiceProvider
     protected function registerCommands()
     {
         $this->app->bind('command.flare:test', TestCommand::class);
+        $this->app->bind('command.make:solution', SolutionMakeCommand::class);
 
         $this->commands([
             'command.flare:test',
+            'command.make:solution',
         ]);
     }
 
@@ -342,6 +346,7 @@ class IgnitionServiceProvider extends ServiceProvider
             MergeConflictSolutionProvider::class,
             RunningLaravelDuskInProductionProvider::class,
             MissingColumnSolutionProvider::class,
+            UnknownValidationSolutionProvider::class,
         ];
     }
 

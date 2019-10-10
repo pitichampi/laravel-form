@@ -66,3 +66,4 @@ Route::group(['prefix'=>'admin'], function (){
 
 });
 
+Route::get('/generate/models', '\\Jimbolino\\Laravel\\ModelBuilder\\ModelGenerator5@start');
