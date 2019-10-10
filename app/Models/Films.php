@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Scopes\FilmsScope;
 use Illuminate\Database\Eloquent\Model;
 
 class Films extends Model
@@ -16,6 +17,14 @@ class Films extends Model
     public static function scopeFilms($query){
 
     }
+
+    protected static function boot()
+    {
+        parent::boot();
+        static::addGlobalScope(new FilmsScope());
+    }
+
+
     public function Immatriculations(){
         return $this->hasOne('App\Models\Immatriculations');
     }
