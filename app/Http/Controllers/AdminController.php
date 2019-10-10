@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Forms\FilmsForm;
 use Kris\LaravelFormBuilder\FormBuilderTrait;
 use App\Models\Films;
+use App\Http\Requests\StoreFilms;
 
 class AdminController extends Controller
 {
@@ -32,7 +33,7 @@ class AdminController extends Controller
 
     }
 
-    public function valid(){
+    public function valid(StoreFilms $request){
         $form=$this->form(FilmsForm::class);
         if(!$form->isValid()){
             return redirect()->back()->withErrors($form->getErrors())->withInput();
