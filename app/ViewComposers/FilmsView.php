@@ -25,7 +25,7 @@ use Illuminate\View\View;
 use App\Models\Films;
 use DB;
 use PDO;
-
+use App\Scopes\FilmsScope;
 use App\Facades\CounterFacade;
 class FilmsView
 {
@@ -57,7 +57,10 @@ class FilmsView
         //$listefilms=$filmsData->fetchAll(PDO::FETCH_ASSOC);
         // Attention rajouter un use PDO en plus du use DB. En fait on utilise simplement l'objet PDO standard.
 
-        $listefilms = Films::with('immatriculations')->get();   // évite un lazy load lorsque l'on veut récupérer les jointures. Il faut mettre la propriété et non la méthode. Il faut donc mettre une minuscule.
+        //$listefilms = Films::with('immatriculations')->get();   // évite un lazy load lorsque l'on veut récupérer les jointures. Il faut mettre la propriété et non la méthode. Il faut donc mettre une minuscule.
+
+        //Désctivation du scope
+        $listefilms = Films::withoutGlobalScope(FilmsScope::class)->with('immatriculations')->get();
 
 
         $count=CounterFacade::getCounter($this->request);
