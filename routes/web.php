@@ -57,11 +57,12 @@ $logger->info('essai écriture dans le log 2');
 
 
 // Grouper les routes de l'admin
-Route::group(['prefix'=>'admin'], function (){
+Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function (){
 
-    Route::get('/insert', ['as'=>'insert','uses'=>'AdminController@insert']);       //as précise l'étiquette de la route dans une vue blade
+    Route::get('/insert', ['as'=>'insert','uses'=>'AdminController@insert']);       // 'as' précise l'étiquette de la route dans une vue blade
     Route::get('/update:{id}', ['as'=>'update','uses'=>'AdminController@update']);
     Route::get('/delete:{id}', ['as'=>'delete','uses'=>'AdminController@delete']);
+    Route::post('/valid', ['as'=>'valid','uses'=>'AdminController@valid'])->middleware('checkFilms');
     Route::post('/valid', ['as'=>'valid','uses'=>'AdminController@valid'])->middleware('checkFilms');
 
 });
