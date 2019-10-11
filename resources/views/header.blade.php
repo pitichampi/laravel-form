@@ -13,6 +13,7 @@
     {{DummyFunction()}}
 
 </p>
+<h2>{{__('messages.welcome')}}</h2>
 
 {{-- Affichage des messages --}}
 

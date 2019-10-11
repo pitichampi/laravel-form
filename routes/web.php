@@ -31,8 +31,8 @@ Route::any('/essai/{nom?}/{prenom?}',function($nom='Toto',$prenom='titi'){
 })->where(['nom'=>'[A-Z]+', 'prenom'=>'[a-z]+']);  // Permet de contrôler la variable via une regex. Si NOK -> 404
 
 
-Route::get('/test/{nom}', 'TestController@index');
-Route::get('/test/{nom}', 'TestController@redirection');
+Route::get('/test/{nom}/{locale}', 'TestController@index');
+//Route::get('/test/{nom}', 'TestController@redirection');
 
 Route::get('/liste', 'FilmsController@liste');
 
