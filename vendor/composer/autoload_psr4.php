@@ -54,6 +54,8 @@ return array(
     'JakubOnderka\\PhpConsoleColor\\' => array($vendorDir . '/jakub-onderka/php-console-color/src'),
     'Illuminate\\' => array($vendorDir . '/laravel/framework/src/Illuminate'),
     'GGuney\\RMigration\\' => array($vendorDir . '/gguney/rmigration/src'),
+    'Froiden\\SqlGenerator\\Tests\\' => array($vendorDir . '/froiden/sql-generator/tests'),
+    'Froiden\\SqlGenerator\\' => array($vendorDir . '/froiden/sql-generator/src'),
     'Fideloper\\Proxy\\' => array($vendorDir . '/fideloper/proxy/src'),
     'Faker\\' => array($vendorDir . '/fzaninotto/faker/src/Faker'),
     'Facade\\Ignition\\' => array($vendorDir . '/facade/ignition/src'),

@@ -33,16 +33,21 @@ class AdminController extends Controller
 
     }
     public function update($id){
-        $film=Films::where('id','=',$id)->first();
-        echo Auth::user()->id;
+ //       $film=Films::where('id','=',$id)->first();
+//        echo Auth::user()->id;
 //        dd($film);
-        $valid=Gate::allows('update-film',$id);
+//        $valid=Gate::allows('update-film',$id);
 
-        if(!$valid){
+/*        if(!$valid){
             dd('erreur ! interdit for you update');
         } else {
             dd('korrrrrekt :)');
-        }
+        }*/
+
+$this->authorize('update-film',$id);
+
+$film=Films::where('id','=',$id)->first();
+        echo Auth::user()->id;
 
 
         $this->form(FilmsForm::class, [

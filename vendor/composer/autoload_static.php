@@ -125,6 +125,8 @@ class ComposerStaticInita88e81e8b1a1153b0bd88cd2f0abfc3a
         ),
         'F' => 
         array (
+            'Froiden\\SqlGenerator\\Tests\\' => 27,
+            'Froiden\\SqlGenerator\\' => 21,
             'Fideloper\\Proxy\\' => 16,
             'Faker\\' => 6,
             'Facade\\Ignition\\' => 16,
@@ -356,6 +358,14 @@ class ComposerStaticInita88e81e8b1a1153b0bd88cd2f0abfc3a
         'GGuney\\RMigration\\' => 
         array (
             0 => __DIR__ . '/..' . '/gguney/rmigration/src',
+        ),
+        'Froiden\\SqlGenerator\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/froiden/sql-generator/tests',
+        ),
+        'Froiden\\SqlGenerator\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/froiden/sql-generator/src',
         ),
         'Fideloper\\Proxy\\' => 
         array (
@@ -1335,6 +1345,10 @@ class ComposerStaticInita88e81e8b1a1153b0bd88cd2f0abfc3a
         'FilmsJointureImmatSeeder' => __DIR__ . '/../..' . '/database/seeds/FilmsJointureImmatSeeder.php',
         'FilmsTableSeeder' => __DIR__ . '/../..' . '/database/seeds/FilmsTableSeeder.php',
         'FormBuilderTestCase' => __DIR__ . '/..' . '/kris/laravel-form-builder/tests/FormBuilderTestCase.php',
+        'Froiden\\SqlGenerator\\Console\\SqlCommand' => __DIR__ . '/..' . '/froiden/sql-generator/src/Console/SqlCommand.php',
+        'Froiden\\SqlGenerator\\SqlFormatter' => __DIR__ . '/..' . '/froiden/sql-generator/src/SqlFormatter.php',
+        'Froiden\\SqlGenerator\\SqlGeneratorServiceProvider' => __DIR__ . '/..' . '/froiden/sql-generator/src/SqlGeneratorServiceProvider.php',
+        'Froiden\\SqlGenerator\\Tests\\TestCase' => __DIR__ . '/..' . '/froiden/sql-generator/tests/TestCase.php',
         'GGuney\\RMigration\\Commands\\MakeReverseMigration' => __DIR__ . '/..' . '/gguney/rmigration/src/Commands/MakeReverseMigration.php',
         'GGuney\\RMigration\\RMigrationServiceProvider' => __DIR__ . '/..' . '/gguney/rmigration/src/RMigrationServiceProvider.php',
         'Hamcrest\\Arrays\\IsArray' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArray.php',
