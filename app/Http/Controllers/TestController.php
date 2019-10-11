@@ -61,6 +61,7 @@ class TestController extends Controller
         {
             $imagepath=$directory.'/'.$image;
             ProcessImages::dispatch($imagepath, 500,500);
+            echo $image.' fini à '.date('h:m:s',$time);
         }
         echo 'Processus fait en '.round(microtime(true)-$time);
     }

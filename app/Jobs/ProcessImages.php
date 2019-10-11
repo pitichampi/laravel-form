@@ -39,9 +39,12 @@ class ProcessImages implements ShouldQueue
     {
         //
         sleep(2);
-        $manager = new ImageManager(array('driver' => 'gd'));
-        $image=$manager->make($this->imagePath)->resize($this->width,$this->height);
-        $basename=pathinfo($this->imagePath, PATHINFO_BASENAME);
-        $image->save(storage_path('dist/'.$basename));
+
+        //$manager = new ImageManager(array('driver' => 'gd'));
+        //$image = $manager->make($this->imagePath)->resize($this->width, $this->height);
+       // $basename = pathinfo($this->imagePath, PATHINFO_BASENAME);
+        echo $this->imagePath;
+        //$image->save(storage_path('dist/' . $basename));
+
     }
 }
