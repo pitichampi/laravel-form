@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\Films;
+use App\Policies\FilmsPolicy;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
 
@@ -15,6 +16,7 @@ class AuthServiceProvider extends ServiceProvider
      */
     protected $policies = [
         // 'App\Model' => 'App\Policies\ModelPolicy',
+        Films::class=>FilmsPolicy::class
     ];
 
     /**

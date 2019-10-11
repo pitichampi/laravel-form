@@ -2,7 +2,7 @@
 
 namespace App\Policies;
 
-use App\Films;
+use App\Models\Films;
 use App\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 use Auth;
@@ -55,6 +55,7 @@ class FilmsPolicy
     public function update(User $user, Films $films)
     {
         //
+        //return true;
         return $user->id==$films->user_id;
     }
 

@@ -27,6 +27,11 @@
     <td>
         {{  $film['synopsys'] }}
     </td>
+    <td>
+        @can('update',$film)
+        <a href="{{route('update',['id'=>$film['id']])}}">edit</a>
+        @endcan
+    </td>
 </tr>
 
 @push('click-img')

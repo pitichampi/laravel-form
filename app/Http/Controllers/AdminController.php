@@ -35,7 +35,8 @@ class AdminController extends Controller
     public function update($id){
 
         //utilisation des policies
-        $film = Films::where('id','=',$id)->first();
+        $film=Films::where('id','=',$id)->first();
+        echo Auth::user()->id;
         if(!Auth::user()->can('update',$film)){
             dd('erreur policies');
         }
@@ -51,8 +52,7 @@ class AdminController extends Controller
 
 //$this->authorize('update-film',$id);
 
-$film=Films::where('id','=',$id)->first();
-        echo Auth::user()->id;
+
 
 
         $this->form(FilmsForm::class, [
