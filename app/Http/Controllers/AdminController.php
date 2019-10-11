@@ -36,7 +36,7 @@ class AdminController extends Controller
         $film=Films::where('id','=',$id)->first();
         echo Auth::user()->id;
 //        dd($film);
-        $valid=Gate::allows('update-films',$id);
+        $valid=Gate::allows('update-film',$id);
 
         if(!$valid){
             dd('erreur ! interdit for you update');
