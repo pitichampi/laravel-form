@@ -178,8 +178,8 @@ return [
         browner12\helpers\HelperServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
         Kris\LaravelFormBuilder\FormBuilderServiceProvider::class,
-        \Froiden\SqlGenerator\SqlGeneratorServiceProvider::class,
-        
+        Froiden\SqlGenerator\SqlGeneratorServiceProvider::class,
+
 
 
     ],
