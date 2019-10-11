@@ -17,11 +17,16 @@ class AdminController extends Controller
 
     use FormBuilderTrait;
     public function insert(){
+
+
+        /* GATES
         $valid=Gate::allows('insert-films');
 
         if(!$valid){
             dd('erreur ! interdit for you insert');
         }
+        */
+
         $form=$this->form(FilmsForm::class, [
             'method'=>'POST',
             'url'=>route('valid')
