@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Events\UserLoggedIn;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
@@ -49,5 +50,9 @@ class LoginController extends Controller
         $request->session()->invalidate();
 
         return $this->loggedOut($request) ?: redirect('/login');
+    }
+    protected function authenticated(Request $request, $user)
+    {
+        event(new UserLoggedIn($request));
     }
 }

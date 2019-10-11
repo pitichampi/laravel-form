@@ -5,15 +5,16 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\App;
-use Livres;
+//use Livres; <- rajouté pour les tests avec Mock
 class TestController extends Controller
 {
     //
-    function index($nom, Request $request,$locale, Livres $livres)
-    {
+    function index($nom, Request $request,$locale){
+    //function index($nom, Request $request,$locale, Livres $livres)    rajouté pour les tests avec Mock
+    /*
         $listelivres=$livres::all();
         dd($listelivres);
-
+*/
         // accès au container
         App::setlocale($locale);
         echo __('messages.welcome');

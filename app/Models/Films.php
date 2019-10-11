@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Scopes\FilmsScope;
 use Illuminate\Database\Eloquent\Model;
+use App\Events\FilmCreated;
 
 class Films extends Model
 {
@@ -37,5 +38,8 @@ class Films extends Model
     public function Immatriculations(){
         return $this->hasOne('App\Models\Immatriculations');
     }
+    protected $dispatchesEvents=[
+        'creating'=>FilmCreated::class,
+    ];
 
 }

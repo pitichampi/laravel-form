@@ -8,6 +8,8 @@ use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvi
 use Illuminate\Support\Facades\Event;
 use App\Listeners\WarningUser;
 use App\Events\UserLoggedIn;
+use App\Listeners\WarningFilm;
+use App\Events\FilmCreated;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -22,6 +24,9 @@ class EventServiceProvider extends ServiceProvider
         ],
         UserLoggedIn::class=>[
             WarningUser::class,
+        ],
+        FilmCreated::class=>[
+            WarningFilm::class,
         ]
     ];
 

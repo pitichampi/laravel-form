@@ -2,12 +2,11 @@
 
 namespace App\Listeners;
 
-use App\Events\UserLoggedIn;
+use App\Events\FilmCreated;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
-use Illuminate\Support\Facades\Storage;
 
-class WarningUser
+class WarningFilm
 {
     /**
      * Create the event listener.
@@ -22,13 +21,11 @@ class WarningUser
     /**
      * Handle the event.
      *
-     * @param  UserLoggedIn  $event
+     * @param  FilmCreated  $event
      * @return void
      */
-    public function handle(UserLoggedIn $event)
+    public function handle(FilmCreated $event)
     {
         //
-        // dd($event->request->user());
-        Storage::disk('public')->put('loginactivity.txt', $event->request->user()->name. ' est connecté le '.time());
     }
 }
