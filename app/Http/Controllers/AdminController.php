@@ -33,9 +33,14 @@ class AdminController extends Controller
 
     }
     public function update($id){
- //       $film=Films::where('id','=',$id)->first();
-//        echo Auth::user()->id;
-//        dd($film);
+
+        //utilisation des policies
+        $film = Films::where('id','=',$id)->first();
+        if(!Auth::user()->can('update',$film)){
+            dd('erreur policies');
+        }
+
+        // Utilisation des gates
 //        $valid=Gate::allows('update-film',$id);
 
 /*        if(!$valid){
@@ -44,7 +49,7 @@ class AdminController extends Controller
             dd('korrrrrekt :)');
         }*/
 
-$this->authorize('update-film',$id);
+//$this->authorize('update-film',$id);
 
 $film=Films::where('id','=',$id)->first();
         echo Auth::user()->id;
