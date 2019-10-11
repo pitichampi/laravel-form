@@ -179,6 +179,7 @@ return [
         Barryvdh\Debugbar\ServiceProvider::class,
         Kris\LaravelFormBuilder\FormBuilderServiceProvider::class,
         Froiden\SqlGenerator\SqlGeneratorServiceProvider::class,
+        Barryvdh\HttpCache\ServiceProvider::class,
 
 
 

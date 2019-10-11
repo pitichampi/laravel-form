@@ -32,6 +32,7 @@ Route::any('/essai/{nom?}/{prenom?}',function($nom='Toto',$prenom='titi'){
 
 
 Route::get('/test/{nom}/{locale}', 'TestController@index');
+Route::get('/resize', 'TestController@resizeImage');
 //Route::get('/test/{nom}', 'TestController@redirection');
 
 Route::get('/liste', 'FilmsController@liste');
@@ -70,3 +71,18 @@ Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function (){
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/cache',function (){
+   // Cache::put('info', 'mon info en cache', 30);
+    Cache::store('database')->put('info', 'mon info en cache', 30);
+});
+Route::get('/recache',function (){
+   // echo Cache::get('info');
+
+    echo Cache::store('database')->get('info');
+});
+Route::get('httpcache', function(){
+    return Response::make(date('h:i:s',time()))->setTtl(60); // Cache 1 minute
+});
+
+
